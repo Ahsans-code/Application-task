@@ -1,7 +1,3 @@
-Of course. Here is a comprehensive `README.md` file for your project. It explains the project's purpose, the technologies used, the folder structure, and provides clear instructions on how to set it up and run it locally.
-
----
-
 # Appicoders - Web & Mobile Development Company Landing Page
 
 This project is a fully responsive, single-page landing page for a fictional web and mobile development agency named "Appicoders". It is built using a modern tech stack featuring React, Vite, and Tailwind CSS, resulting in a fast, efficient, and visually appealing user experience.
