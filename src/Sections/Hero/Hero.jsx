@@ -12,8 +12,8 @@ const AppicoderoHeader = () => {
         <header className="relative z-20 text-white">
             <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-end gap-3 h-24">
-                    <img src={logo} className='w-[348px] h-[87px] absolute top-[55px] left-[104px]' />
-                    <nav className="hidden lg:flex flex-col lg:items-end gap-3">
+                    <img src={logo} className='w-[250px] h-[70px] absolute top-[55px] left-[90px]' />
+                    <nav className="hidden lg:flex flex-col lg:items-end gap-3 pt-10">
                         <div className='flex gap-6  items-center'>
 
                             {navLinks.map((link) => (
@@ -71,12 +71,12 @@ const Hero = () => {
             <div className="relative">
                 <AppicoderoHeader />
                 <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-32">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div className="flex justify-center lg:justify-start">
-                            <img src={mobileMockup} alt="Mobile App Mockup" className="max-w-md w-full" />
+                    <div className="flex gap-7 items-center">
+                        <div className="flex justify-start">
+                            <img src={mobileMockup} alt="Mobile App Mockup" className=" w-full" />
                         </div>
-                        <div className="text-white text-center lg:text-left">
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
+                        <div className="text-white  lg:text-left">
+                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
                                 Leading the Way in App Development Innovation
                             </h1>
                             <p className="mt-6 text-lg text-gray-300 max-w-lg mx-auto lg:mx-0">
@@ -89,21 +89,22 @@ const Hero = () => {
                                 >
                                     GET A FREE QUOTE
                                 </a>
-                                <div className="flex items-center justify-center space-x-3 mt-4 sm:mt-0">
-                                    <button className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors duration-300">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-                                        </svg>
-                                    </button>
-                                    <button className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors duration-300">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </button>
-                                </div>
+                            </div>
+                            <div className="flex self-baseline items-center justify-end pr-32  space-x-3 mt-4 ">
+                                <button className="bg-white p-3 rounded-full  transition-colors duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+                                <button className="bg-white p-3 rounded-full  transition-colors duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </div>
+
                 </main>
             </div>
         </div>
