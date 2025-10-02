@@ -34,7 +34,7 @@ const Testimonials = () => {
                                 <div className="flex items-center mb-6">
                                     <div className="relative mr-5 flex-shrink-0">
                                         <img
-                                            src={clientAvatar}
+                                            src={"https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2787&auto=format&fit=crop"}
                                             alt="Scarlett Lawrence"
                                             className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover ring-4 ring-white shadow-md"
                                         />
