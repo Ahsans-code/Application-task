@@ -7,6 +7,7 @@ import Industries from '../Sections/Industries/Industries'
 import Technologies from '../Sections/Technologies/Technologies'
 import Products from '../Sections/Products/Products'
 import Awards from '../Sections/Awards/Awards'
+import Footer from '../Sections/Footer/Footer'
 
 export default function Home() {
     return (
@@ -19,6 +20,7 @@ export default function Home() {
             <Technologies />
             <Products />
             <Awards />
+            <Footer />
         </div>
     )
 }

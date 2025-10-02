@@ -6,7 +6,7 @@ import logo from '../../assets/logo.png';
 const AppicoderoHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const navLinks = ["HOME", "About", "Services", "Why Choose Us", "Portfolio", "Products", "Testimonial", "Technologies", "Contact"];
+    const navLinks = ["Home", "About", "Services", "Why Choose Us", "Portfolio", "Products", "Testimonial", "Technologies", "Contact"];
 
     return (
         <header className="relative z-20 text-white">
@@ -14,7 +14,7 @@ const AppicoderoHeader = () => {
                 <div className="flex items-center justify-end gap-3 h-24">
                     <img src={logo} className='w-[348px] h-[87px] absolute top-[55px] left-[104px]' />
                     <nav className="hidden lg:flex flex-col lg:items-end gap-3">
-                        <div className='flex gap-3  items-center'>
+                        <div className='flex gap-6  items-center'>
 
                             {navLinks.map((link) => (
                                 <a key={link} href="#" className="text-lg hover:text-red-500  transition-colors duration-300">
@@ -85,7 +85,7 @@ const Hero = () => {
                             <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-center lg:justify-start gap-4">
                                 <a
                                     href="#"
-                                    className="inline-block bg-red-600 text-white font-semibold px-8 py-4 rounded-md shadow-lg hover:bg-red-700 transition-colors duration-300"
+                                    className="inline-block bg-gradient-to-br from-red-700 via-red-800 to-red-700 text-white font-semibold px-8 py-4 rounded-md shadow-lg transition-colors duration-300"
                                 >
                                     GET A FREE QUOTE
                                 </a>
