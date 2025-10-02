@@ -6,7 +6,7 @@ import productMarketplace from '../../assets/ipad-2.png';
 import productOsda from '../../assets/Mobile-1.png';
 import productTraining from '../../assets/Laptop-2.png';
 import productHealth from '../../assets/ipad-2.png';
-import productSports from '../../assets/Laptop.png'; // Assuming a name for the last laptop image
+import productSports from '../../assets/laptop.png'; // Assuming a name for the last laptop image
 
 const Products = () => {
     const [activeTab, setActiveTab] = useState('ALL');
