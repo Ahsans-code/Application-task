@@ -12,7 +12,7 @@ const AppicoderoHeader = () => {
         <header className="relative z-20 text-white">
             <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-end gap-3 h-24">
-                    <img src={logo} className='w-[250px] h-[70px] absolute top-[55px] left-[90px]' />
+                    <img src={logo} className='w-[250px] h-[70px] absolute top-[55px] left-[50px]' />
                     <nav className="hidden lg:flex flex-col lg:items-end gap-3 pt-10">
                         <div className='flex gap-6  items-center'>
 
@@ -22,7 +22,7 @@ const AppicoderoHeader = () => {
                                 </a>
                             ))}
                         </div>
-                        <div className="hidden lg:flex items-center space-x-4 rounded-full border-white border py-1 px-2">
+                        <div className="hidden lg:flex items-center space-x-4 rounded-full border-white border py-1 px-3">
                             <a href="tel:+18008268018" className="flex items-center space-x-2 text-sm font-medium">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -62,7 +62,7 @@ const AppicoderoHeader = () => {
 
 const Hero = () => {
     return (
-        <div className="relative overflow-hidden bg-[#0F111A]">
+        <div className="relative overflow-hidden pb-10 ">
             <div
                 className="absolute inset-0 w-full h-full bg-no-repeat bg-center"
                 style={{ backgroundImage: `url(${heroBg})`, backgroundSize: 'cover' }}
@@ -70,7 +70,7 @@ const Hero = () => {
 
             <div className="relative">
                 <AppicoderoHeader />
-                <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-32">
+                <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-12 ">
                     <div className="flex gap-7 items-center">
                         <div className="flex justify-start">
                             <img src={mobileMockup} alt="Mobile App Mockup" className=" w-full" />
@@ -79,13 +79,13 @@ const Hero = () => {
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
                                 Leading the Way in App Development Innovation
                             </h1>
-                            <p className="mt-6 text-lg text-gray-300 max-w-lg mx-auto lg:mx-0">
+                            <p className="mt-6 text-lg text-white max-w-lg mx-auto lg:mx-0">
                                 We build Android & iOS Mobile Apps that cater all your business needs and take it on the next level.
                             </p>
                             <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-center lg:justify-start gap-4">
                                 <a
                                     href="#"
-                                    className="inline-block bg-gradient-to-br from-red-700 via-red-800 to-red-700 text-white font-semibold px-8 py-4 rounded-md shadow-lg transition-colors duration-300"
+                                    className="inline-block bg-gradient-to-br from-red-800 via-red-900 to-red-800 text-white font-semibold px-10 py-3 rounded-md shadow-lg transition-colors duration-300"
                                 >
                                     GET A FREE QUOTE
                                 </a>
