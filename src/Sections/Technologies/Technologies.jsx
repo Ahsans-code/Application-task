@@ -5,7 +5,7 @@ import cloudBg from '../../assets/cloud.png';
 const Technologies = () => {
     return (
         <section
-            className="relative bg-cover bg-center py-20 sm:py-24 "
+            className="relative bg-cover bg-center py-20 sm:py-24 overflow-x-hidden "
             style={{ backgroundImage: `url(${cloudBg})` }}
         >
             <div className="absolute inset-0 bg-black/70"></div>
