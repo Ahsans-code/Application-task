@@ -5,7 +5,7 @@ import cloudBg from '../../assets/cloud.png';
 const Technologies = () => {
     return (
         <section
-            className="relative bg-cover bg-center py-20 sm:py-24 overflow-x-hidden "
+            className="relative bg-cover bg-center  pt-14 sm:py-24 overflow-x-hidden "
             style={{ backgroundImage: `url(${cloudBg})` }}
         >
             <div className="absolute inset-0 bg-black/70"></div>
@@ -15,8 +15,8 @@ const Technologies = () => {
                     <h2 className="text-4xl font-bold text-white tracking-wide">Technologies</h2>
                 </div>
 
-                <div className="max-w-5xl flex  items-center ">
-                    <div className="bg-white pl-20 pr-32  py-40 min-w-2xl  shadow-2xl rounded  ">
+                <div className="max-w-5xl flex flex-col xl:flex-row  items-center ">
+                    <div className="bg-white p-8 md:pl-20 md:pr-32 pb-28 md:py-40 lg:min-w-2xl  shadow-2xl rounded  ">
                         <h3 className="text-3xl font-bold text-gray-800 mb-4">
                             Cloud Solutions
                         </h3>
@@ -33,7 +33,7 @@ const Technologies = () => {
                     <img
                         src={technologyImage}
                         alt="Cloud Solutions"
-                        className="h-[400px] -translate-x-28 z-10   object-cover rounded"
+                        className="max-lg:w-[90%] max-h-[400px] -translate-y-20 xl:-translate-x-28 z-10   object-cover rounded"
                     />
 
                 </div>

@@ -11,8 +11,8 @@ const AppicoderoHeader = () => {
     return (
         <header className="relative z-20 text-white">
             <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-end gap-3 h-24">
-                    <img src={logo} className='w-[250px] h-[70px] absolute top-[55px] left-[50px]' />
+                <div className="flex items-center justify-between md:justify-end gap-3 h-24">
+                    <img src={logo} className='w-40 md:w-[250px] md:h-[70px] md:absolute top-[55px] left-[50px]' />
                     <nav className="hidden lg:flex flex-col lg:items-end gap-3 pt-10">
                         <div className='flex gap-6  items-center'>
 
@@ -42,7 +42,14 @@ const AppicoderoHeader = () => {
                 </div>
             </div>
             {isMenuOpen && (
-                <div className="lg:hidden bg-[#1e2029] absolute w-full">
+                <div className={`lg:hidden bg-[#1e2029] h-screen ${isMenuOpen ? "translate-y-0" : "-translate-y-full"} overflow-hidden transition-all duration-200 ease-in-out fixed top-0 w-full pt-10 `}>
+                    <div className="lg:hidden absolute right-5 top-5">
+                        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white focus:outline-none">
+                            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"} />
+                            </svg>
+                        </button>
+                    </div>
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         {navLinks.map((link) => (
                             <a key={link} href="#" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700">
@@ -70,10 +77,10 @@ const Hero = () => {
 
             <div className="relative">
                 <AppicoderoHeader />
-                <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-12 ">
-                    <div className="flex gap-7 items-center">
+                <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-7 md:pt-12 ">
+                    <div className="flex flex-col md:flex-row gap-7 items-center">
                         <div className="flex justify-start">
-                            <img src={mobileMockup} alt="Mobile App Mockup" className=" w-full" />
+                            <img src={mobileMockup} alt="Mobile App Mockup" className=" w-64 md:w-full" />
                         </div>
                         <div className="text-white  lg:text-left">
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">

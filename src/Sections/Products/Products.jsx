@@ -92,9 +92,9 @@ const Products = () => {
                     ))}
                 </nav>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5">
+                <div className="grid place-items-center gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
                     {filteredProducts.map((product) => (
-                        <div key={product.id} className="group relative w-96 bg-white p-6 rounded shadow-lg overflow-hidden cursor-pointer">
+                        <div key={product.id} className="group relative  bg-white p-6 rounded shadow-lg overflow-hidden cursor-pointer">
                             <div className="aspect-w-4 aspect-h-3">
                                 <img
                                     src={product.image}
