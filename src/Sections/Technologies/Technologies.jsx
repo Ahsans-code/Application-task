@@ -33,7 +33,7 @@ const Technologies = () => {
                     <img
                         src={technologyImage}
                         alt="Cloud Solutions"
-                        className="max-lg:w-[90%] max-h-[400px] -translate-y-20 xl:-translate-x-28 z-10   object-cover rounded"
+                        className="max-lg:w-[90%] max-h-[400px] max-xl:-translate-y-20 xl:-translate-x-28 z-10   object-cover rounded"
                     />
 
                 </div>
