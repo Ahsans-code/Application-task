@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import mobileMockup from '../../assets/Mobile-Mockup1.png';
 import heroBg from '../../assets/heroBg.png';
 import logo from '../../assets/logo.png';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const AppicoderoHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,7 +68,38 @@ const AppicoderoHeader = () => {
 };
 
 
+
+const sliderContent = [
+    {
+        image: mobileMockup,
+        heading: "Leading the Way in App Development Innovation",
+        paragraph: "We build Android & iOS Mobile Apps that cater all your business needs and take it on the next level."
+    },
+    {
+        image: mobileMockup,
+        heading: "Crafting User-Centric Digital Experiences",
+        paragraph: "Our expert team designs and develops beautiful, intuitive applications that your users will love."
+    },
+    {
+        image: mobileMockup,
+        heading: "Delivering Robust and Scalable Solutions",
+        paragraph: "From startups to enterprise-level, we create powerful apps that grow with your business."
+    }
+];
+
 const Hero = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % sliderContent.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + sliderContent.length) % sliderContent.length);
+    };
+
+    const currentSlide = sliderContent[currentIndex];
+
     return (
         <div className="relative overflow-hidden pb-10 ">
             <div
@@ -80,30 +112,57 @@ const Hero = () => {
                 <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-7 md:pt-12 ">
                     <div className="flex flex-col md:flex-row gap-7 items-center">
                         <div className="flex justify-start">
-                            <img src={mobileMockup} alt="Mobile App Mockup" className=" w-64 md:w-full" />
+                            {/* Animated Image */}
+                            <AnimatePresence mode="wait">
+                                <motion.img
+                                    key={currentIndex}
+                                    src={currentSlide.image}
+                                    alt="Mobile App Mockup"
+                                    className="w-64 md:w-full"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 0.5 }}
+                                />
+                            </AnimatePresence>
                         </div>
-                        <div className="text-white  lg:text-left">
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-                                Leading the Way in App Development Innovation
-                            </h1>
-                            <p className="mt-6 text-lg text-white max-w-lg mx-auto lg:mx-0">
-                                We build Android & iOS Mobile Apps that cater all your business needs and take it on the next level.
-                            </p>
+                        <div className="text-white lg:text-left">
+                            {/* Animated Text Content */}
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    className='xl:w-[800px]'
+                                    key={currentIndex}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20 }}
+                                    transition={{ duration: 0.5 }}
+                                >
+                                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+                                        {currentSlide.heading}
+                                    </h1>
+                                    <p className="mt-6 text-lg text-white max-w-lg mx-auto lg:mx-0">
+                                        {currentSlide.paragraph}
+                                    </p>
+                                </motion.div>
+                            </AnimatePresence>
+
                             <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-center lg:justify-start gap-4">
                                 <a
                                     href="#"
-                                    className="inline-block bg-gradient-to-br from-red-800 via-red-900 to-red-800 text-white font-semibold px-10 py-3 rounded-md shadow-lg transition-colors duration-300"
+                                    className="inline-block bg-gradient-to-br from-red-800 via-red-900 to-red-800 text-white font-semibold px-10 py-3 rounded-md shadow-lg transition-colors duration-300 text-center"
                                 >
                                     GET A FREE QUOTE
                                 </a>
                             </div>
-                            <div className="flex self-baseline items-center justify-end pr-32  space-x-3 mt-4 ">
-                                <button className="bg-white p-3 rounded-full  transition-colors duration-300">
+                            <div className="flex self-baseline items-center justify-end pr-32 space-x-3 mt-4">
+                                {/* Previous Button */}
+                                <button onClick={prevSlide} className="bg-white p-3 rounded-full transition-colors duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
                                     </svg>
                                 </button>
-                                <button className="bg-white p-3 rounded-full  transition-colors duration-300">
+                                {/* Next Button */}
+                                <button onClick={nextSlide} className="bg-white p-3 rounded-full transition-colors duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                                     </svg>
@@ -111,7 +170,6 @@ const Hero = () => {
                             </div>
                         </div>
                     </div>
-
                 </main>
             </div>
         </div>
